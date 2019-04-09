@@ -1,7 +1,7 @@
 # Operating-System
 
 Operating System simulation based projects. Problem:
-
+# 1
 There are 3 student processes and 1 teacher process. Students are supposed to do their assignments and they need 3 things for that pen, paper and question paper. The teacher has an infinite supply of all the three things. One students has pen,an other has paper and another has question paper. The teacher places two things on a shared table and the student having the third complementary thing makes the assignment and tells the teacher on completion. The teacher then places another two things out of the three and again the student having the third thing makes the assignment and tells the teacher on completion. This cycle continues. WAP to synchronize the teacher and the students.
 
 
@@ -14,12 +14,7 @@ Explanation:
 6.	When a process starts to execute it acquires the lock and when it completes the execution releases the lock. 
 7.	After completion of all the three processes the program will end.
 
-Design a scheduling program that is capable of scheduling many processes that comes in at some time interval and are allocated the CPU not more than 10 time units. CPU must schedule processes having short execution time first. CPU is idle for 3 time units and does not entertain any process prior this time. Scheduler must maintain a queue that keeps the order of execution of all the processes. Compute average waiting and turnaround time.
+# 2
+Two types of people can enter into a library- students and teachers. After entering the library, the visitor searches for the required books and gets them. In order to get them issued, he goes to the single CPU which is there to process the issuing of books. Two types of queues are there at the counter-one for students and one for teachers. A student goes and stands at the tail of the queue for students and similarly the teacher goes and stands at the tail of the queue for teachers (FIFO). If a student is being serviced and a teacher arrives at the counter, he would be the next person to get service (PRIORITY-non preemptive). If two teachers arrive at the same time, they will stand in their queue to get service (FIFO). WAP to ensure that the system works in a non-chaotic manner. 
 
-Explanation: 
-1.	For solving this problem the processes are scheduled considering their arrival and Wait time. 
-2.	I have made 5 functions: readData(); Init(); getNextProcess(); dispTime(); computeSRT(); 
-3.	User will get to enter process burst time and arrival time. 
-4.	Depending on that ComputeSRT function will calculate the shortest run time of the processes and it will be entered in gantt chart. 
-5.	After every unit time when a process will entered by user ComputeSRT will compare the remaining run time of currently running process and if less than new process then it will be preumpted.
-6.	After completion of all the processes the program will prepare a gantt chart and program will end
+ If a teacher is being served and during the period when he is being served, another teacher comes, then that teacher would get the service next. This process might continue leading to increase in waiting time of students. Ensure in your program that the waiting time of students is minimized.
